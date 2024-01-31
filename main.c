@@ -16,19 +16,34 @@ int main() {
     // Get input from user
     printf("Please insert a letter:\n");
     scanf("%c", &input);
+    int i, j;
     switch (input)
     {
     case ('A'):
-        /* code */
+        setMatrixValue(matrix);
         break;
     case ('B'):
-        /* code */
+        scanf("%d %d", &i, &j);
+        int ans=checkPath(i,j,matrix);
+        if(ans==TRUE)
+            printf("True\n");
+        else
+            printf("False\n");
         break;
     case ('C'):
-        /* code */
+        scanf("%d %d", &i, &j);
+        int ans=shortestPath(i,j,matrix);
+        if(ans==MAX_INT||ans==0)
+            printf("-1\n");
+        else
+            printf("%d\n",ans);
         break;
     case ('D'):
-        /* code */
+        printf("Exit the program\n");
+         printf("bye bye\n");
+        break;
+    default:
+        printf("Invalid input\n");
         break;
     }
 }
