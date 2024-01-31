@@ -1,9 +1,5 @@
 #include <stdio.h>
 #include "my_mat.h"
-//function declarations
-void setMatrixValue(int matrix[SIZE][SIZE]);
-int checkPath(int i, int j, int matrix[SIZE][SIZE]);
-int shortestPath(int i, int j, int matrix[SIZE][SIZE]);
 
 void setMatrixValue(int matrix[SIZE][SIZE]){
     printf("Please insert the matrix values:\n");
@@ -18,7 +14,7 @@ int checkPath(int i, int j, int matrix[SIZE][SIZE]){
     int ans=shortestPath(i, j, matrix);
     if(ans==MAX_INT||ans==0)
         return FALSE;//There is no path
-        
+
     return TRUE;    
 }
 /*
