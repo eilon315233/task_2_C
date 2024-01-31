@@ -32,7 +32,7 @@ int main() {
         break;
     case ('C'):
         scanf("%d %d", &i, &j);
-        int ans=shortestPath(i,j,matrix);
+        ans=shortestPath(i,j,matrix);
         if(ans==MAX_INT||ans==0)
             printf("-1\n");
         else
