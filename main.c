@@ -17,39 +17,44 @@ int main() {
     // Initialize matrix
     //initMatrix(matrix);
 
-    // Get input from user
-    printf("Please insert a letter:\n");
-    scanf("%c", &input);
     int i, j;
-    switch (input)
+    do
     {
-    case ('A'):
-        setMatrixValue(matrix);
-        break;
-    case ('B'):
-        scanf("%d %d", &i, &j);
-        int ans=checkPath(i,j,matrix);
-        if(ans==TRUE)
-            printf("True\n");
-        else
-            printf("False\n");
-        break;
-    case ('C'):
-        scanf("%d %d", &i, &j);
-        ans=shortestPath(i,j,matrix);
-        if(ans==MAX_INT||ans==0)
-            printf("-1\n");
-        else
-            printf("%d\n",ans);
-        break;
-    case ('D'):
-        printf("Exit the program\n");
-         printf("bye bye\n");
-        break;
-    default:
-        printf("Invalid input\n");
-        break;
-    }
+        // Get input from user
+        printf("Please insert a letter:\n");
+        scanf("%c", &input);
+        switch (input)
+        {
+        case ('A'):
+            setMatrixValue(matrix);
+            break;
+        case ('B'):
+            scanf("%d %d", &i, &j);
+            int ans=checkPath(i,j,matrix);
+            if(ans==TRUE)
+                printf("True\n");
+            else
+                printf("False\n");
+            break;
+        case ('C'):
+            scanf("%d %d", &i, &j);
+            ans=shortestPath(i,j,matrix);
+            if(ans==MAX_INT||ans==0)
+                printf("-1\n");
+            else
+                printf("%d\n",ans);
+            break;
+        case ('D'):
+            printf("Exit the program\n");
+            printf("bye bye\n");
+            break;
+        default:
+            printf("Invalid input\n");
+            break;
+        }
+    }while (input!='D');
+    
+    return 0;
 }
 void initMatrix(int matrix[SIZE][SIZE]){
     for(int i=0;i<SIZE;i++) {
