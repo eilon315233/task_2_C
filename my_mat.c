@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "my_mat.h"
-//#define SIZE 10
 
 void firstFunc(int matrix[SIZE][SIZE]){
     printf("Please insert the matrix values:\n");
@@ -10,4 +9,7 @@ void firstFunc(int matrix[SIZE][SIZE]){
             scanf("%d", &matrix[i][j]);
         }
     }
+}
+int secondFunc(int i, int j, int matrix[SIZE][SIZE]){
+    
 }
