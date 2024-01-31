@@ -2,7 +2,7 @@
 #include "my_mat.h"
 
 //function declarations
-void firstFunc(int matrix[SIZE][SIZE]);
+void initMatrix(int matrix[SIZE][SIZE]);
 
 int main() { 
     

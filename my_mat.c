@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include "my_mat.h"
+//function declarations
+void setMatrixValue(int matrix[SIZE][SIZE]);
+int checkPath(int i, int j, int matrix[SIZE][SIZE]);
+int shortestPath(int i, int j, int matrix[SIZE][SIZE]);
 
 void setMatrixValue(int matrix[SIZE][SIZE]){
     printf("Please insert the matrix values:\n");
