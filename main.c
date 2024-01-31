@@ -3,6 +3,10 @@
 
 //function declarations
 void initMatrix(int matrix[SIZE][SIZE]);
+void setMatrixValue(int matrix[SIZE][SIZE]);
+int checkPath(int i, int j, int matrix[SIZE][SIZE]);
+int shortestPath(int i, int j, int matrix[SIZE][SIZE]);
+
 
 int main() { 
     
