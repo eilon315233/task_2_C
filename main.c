@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include "my_mat.h"
-#define SIZE 10
 
 //function declarations
-void initMatrix(int matrix[SIZE][SIZE]);
+void firstFunc(int matrix[SIZE][SIZE]);
 
 int main() { 
     
@@ -12,14 +11,15 @@ int main() {
 
 
     // Initialize matrix
-    initMatrix(matrix);
+    //initMatrix(matrix);
 
     // Get input from user
+    printf("Please insert a letter:\n");
     scanf("%c", &input);
     switch (input)
     {
     case ('A'):
-        firstFunc(matrix);
+        /* code */
         break;
     case ('B'):
         /* code */
