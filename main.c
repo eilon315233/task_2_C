@@ -48,6 +48,13 @@ int main() {
             printf("Exit the program\n");
             printf("bye bye\n");
             break;
+        case ('E')://print matrix
+            for(int i=0;i<SIZE;i++) {
+                for(int j=0;j<SIZE;j++) {
+                    printf("%d ",matrix[i][j]);
+                }
+                printf("\n");
+            }
         default:
             printf("Invalid input\n");
             break;
