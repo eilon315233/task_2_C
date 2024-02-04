@@ -21,12 +21,12 @@ int main() {
     do
     {
         // Get input from user
-        printf("Please insert a letter:\n");
         scanf("%c", &input);
         switch (input)
         {
         case ('A'):
             setMatrixValue(matrix);
+            //printMatrix(matrix);
             break;
         case ('B'):
             scanf("%d %d", &i, &j);
@@ -45,8 +45,6 @@ int main() {
                 printf("%d\n",ans);
             break;
         case ('D'):
-            printf("Exit the program\n");
-            printf("bye bye\n");
             break;
         case ('E')://print matrix
             for(int i=0;i<SIZE;i++) {
@@ -56,13 +54,14 @@ int main() {
                 printf("\n");
             }
         default:
-            printf("Invalid input\n");
             break;
         }
-    }while (input!='D');
+    }
+    while (input!='D');
     
     return 0;
 }
+
 void initMatrix(int matrix[SIZE][SIZE]){
     for(int i=0;i<SIZE;i++) {
         for(int j=0;j<SIZE;j++) {
@@ -71,3 +70,13 @@ void initMatrix(int matrix[SIZE][SIZE]){
     }
 }
 
+/*
+void printMatrix(int matrix[SIZE][SIZE]){
+    for(int i=0;i<SIZE;i++) {
+        for(int j=0;j<SIZE;j++) {
+            printf("%d ",matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+*/

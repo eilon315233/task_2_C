@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include "my_mat.h"
 
+//function to initialize matrix
 void setMatrixValue(int matrix[SIZE][SIZE]){
-    printf("Please insert the matrix values:\n");
     for(int i=0;i<SIZE;i++) {
         for(int j=0;j<SIZE;j++) {
-            printf("Please insert the value for cell [%d][%d]:\n", i, j);
             scanf("%d", &matrix[i][j]);
         }
     }
 }
+
+//function to check if there is a path between i and j
 int checkPath(int i, int j, int matrix[SIZE][SIZE]){
     int ans=shortestPath(i, j, matrix);
     if(ans==MAX_INT||ans==0)
@@ -17,9 +18,8 @@ int checkPath(int i, int j, int matrix[SIZE][SIZE]){
 
     return TRUE;    
 }
-/*
-this function will get a matrix and will return the shortest path from vertex i to vertex j
-*/
+
+//function to find the shortest path between i and j
 int shortestPath(int i, int j, int matrix[SIZE][SIZE]){
     
     //Copy matrix
