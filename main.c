@@ -26,7 +26,7 @@ int main() {
         {
         case ('A'):
             setMatrixValue(matrix);
-            //printMatrix(matrix);
+            floyd_Warshall(matrix);
             break;
         case ('B'):
             scanf("%d %d", &i, &j);
@@ -38,11 +38,10 @@ int main() {
             break;
         case ('C'):
             scanf("%d %d", &i, &j);
-            ans=shortestPath(i,j,matrix);
-            if(ans==MAX_INT||ans==0)
+            if (matrix[i][j] == 0)
                 printf("-1\n");
             else
-                printf("%d\n",ans);
+                printf("%d\n", matrix[i][j]);
             break;
         case ('D'):
             break;

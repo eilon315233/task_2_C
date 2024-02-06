@@ -5,5 +5,5 @@
 #define MAX_INT INT_MAX // Define a constant representing the maximum value for int
 void setMatrixValue(int matrix[SIZE][SIZE]);
 int checkPath(int i, int j, int matrix[SIZE][SIZE]);
-int shortestPath(int i, int j, int matrix[SIZE][SIZE]);
+void floyd_Warshall(int matrix[SIZE][SIZE]);
 void printMatrix(int matrix[SIZE][SIZE]);
