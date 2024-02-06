@@ -8,13 +8,13 @@ AFLAGS = rcs
 
 all: connections
 
-connections: main.o libmymath.a
+connections: my_graph.o libmymath.a
 	$(CC) $(CFLAGS) $^ -o $@
 
 libmymath.a: my_mat.o
 	$(AR) $(AFLAGS) $@ $<
 
-main.o: main.c my_mat.h
+main.o: my_graph.c my_mat.h
 	$(CC) $(CFLAGS) -c $<
 
 my_mat.o: my_mat.c my_mat.h
