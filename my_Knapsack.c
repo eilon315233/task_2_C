@@ -26,6 +26,6 @@ int main() {
 
     //print the items that give the maximum profit
     printf("Items that give the maximum profit: %s", result);
-
+    
     return 0;
 }

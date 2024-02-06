@@ -10,7 +10,7 @@ all: my_graph my_Knapsack
 
 my_Knapsack: my_Knapsack.o  libmymath.a
 	$(CC) $(CFLAGS) $^ -o $@
-	
+
 my_graph: my_graph.o  libmymath.a	
 	$(CC) $(CFLAGS) $^ -o $@
 
@@ -27,4 +27,4 @@ my_mat.o: my_mat.c my_mat.h
 	$(CC) $(CFLAGS) -c $<
 
 clean:
-	rm -f *.o *.a connections
+	rm -f *.o *.a my_graph my_Knapsack
