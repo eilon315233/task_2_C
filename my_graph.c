@@ -68,14 +68,3 @@ void initMatrix(int matrix[SIZE][SIZE]){
         }
     }
 }
-
-/*
-void printMatrix(int matrix[SIZE][SIZE]){
-    for(int i=0;i<SIZE;i++) {
-        for(int j=0;j<SIZE;j++) {
-            printf("%d ",matrix[i][j]);
-        }
-        printf("\n");
-    }
-}
-*/
