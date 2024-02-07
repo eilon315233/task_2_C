@@ -5,42 +5,49 @@ int main() {
 
    int weights[Array_size];
    int values[Array_size] ;
-   int result[Array_size];
+   int selected_bool[Array_size];
 
    // Initialize  the result array with 0
     for (int i = 0; i < Array_size; i++)
-        result[i] = 0;
+        selected_bool[i] = 0;
 
     // the items are represented by the following array
-    int items[] = {'A', 'B', 'C', 'D', 'E'};
+    char items[Array_size];
 
-    // Get input from user to fill the values array
-    for (int i = 0; i < Array_size; i++) {
-        scanf("%d", &values[i]);
-    }
+    for(int i=0; i<Array_size-1; i++)
+        {
+            
+           scanf("%c ", &items[i]);
 
-    // Get input from user to fill the weights array
-    for (int i = 0; i < Array_size; i++) {
-        scanf("%d", &weights[i]);
-    }
+            scanf("%d ", &values[i]);
+
+            scanf("%d ", &weights[i]);
+
+        }
+
+            scanf("%c ", &items[Array_size-1]);
+
+            scanf("%d ", &values[Array_size-1]);
+
+            scanf("%d", &weights[Array_size-1]);
     
     // print the maximum profit
-    printf("Maximum profit: %d\n", knapSack(weights, values, result));
+    printf("Maximum profit: %d\n", knapSack(weights, values, selected_bool));
 
 
     //print the items that give the maximum profit
-    printf("Items that give the maximum profit: [");
+    printf("Selected items: ");
 
     int printed = 0;
     for (int i = 0; i < Array_size; i++) {
-        if (result[i]) {
+        if (selected_bool[i]) {
             if (printed > 0)
-                printf(", ");
+                printf(" ");
             printf("%c", items[i]);
             printed++;
         }
     }
-    printf("]\n");
+    printf("\n");
     
     return 0;
 }
